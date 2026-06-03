@@ -176,6 +176,34 @@ body.app-loaded .side-text {
   font-size: clamp(20px, 3.5vw, 65px);
 }
 
+.reunion-message {
+  position: relative;
+  z-index: 5;
+  display: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 18vw, 260px);
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: clamp(2px, 0.35vw, 6px) rgba(255, 215, 0, 0.28);
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.reunion-day .side-text,
+body.reunion-day .center-console {
+  display: none;
+}
+
+body.reunion-day .reunion-message {
+  display: block;
+}
+
+body.app-loaded.reunion-day .reunion-message {
+  animation: sideFadeIn 2s ease forwards;
+}
+
 .center-console {
   position: relative;
   z-index: 5;

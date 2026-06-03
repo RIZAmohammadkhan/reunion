@@ -2,6 +2,7 @@ import './styles.css';
 
 const targetDate = new Date('2036-06-15T00:00:00Z');
 const startOverlay = document.getElementById('start-overlay');
+let reunionDayActive = false;
 
 let audioCtx;
 let audioInitialized = false;
@@ -56,12 +57,20 @@ function setCountdownToZero() {
   });
 }
 
+function showReunionMessage() {
+  if (reunionDayActive) return;
+
+  reunionDayActive = true;
+  document.body.classList.add('reunion-day');
+  setCountdownToZero();
+}
+
 function tick() {
   const now = new Date();
   const diff = targetDate.getTime() - now.getTime();
 
   if (diff <= 0) {
-    setCountdownToZero();
+    showReunionMessage();
     return;
   }
 
