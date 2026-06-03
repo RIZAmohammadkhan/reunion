@@ -1,0 +1,16 @@
+{
+  "name": "Class of 2026 Reunion Countdown",
+  "short_name": "Reunion '26",
+  "description": "A cinematic countdown for the Class of 2026 reunion.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
