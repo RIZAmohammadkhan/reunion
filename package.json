@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=reunion-countdown"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.39.2",
     "vite": "^6.3.5",
-    "wrangler": "^4.18.0"
+    "wrangler": "^4.97.0"
   }
 }
